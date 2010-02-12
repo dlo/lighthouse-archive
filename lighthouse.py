@@ -1,5 +1,3 @@
-#!/usr/bin/env python
-
 import re
 
 class Response():
@@ -30,4 +28,3 @@ class Lighthouse():
 
         start_response(str(response), response.make_headers())
         return [response.content]
-
