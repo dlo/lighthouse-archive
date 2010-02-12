@@ -16,7 +16,7 @@ class Response():
     def __str__(self):
         return "%d %s" % (self._status, self._msg)
 
-class Lightpost():
+class Lighthouse():
     def __init__(self, urls = None):
         self.urls = dict(urls)
 
@@ -39,5 +39,5 @@ urls = (
     ('/', home),
 )
 
-WSGIServer(Lightpost(urls)).run()
+WSGIServer(Lighthouse(urls)).run()
 
