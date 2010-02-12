@@ -17,12 +17,12 @@ class Response():
 
 class Lighthouse():
     def __init__(self, urls = None):
-        self.urls = dict(urls)
+        self.urls = urls
 
     def __call__(self, environ, start_response):
         response = Response()
         path = environ['PATH_INFO']
-        for url, f in self.urls.iteritems():
+        for url, f in self.urls:
             r = re.compile(url)
             m = r.match(path)
             if m:
